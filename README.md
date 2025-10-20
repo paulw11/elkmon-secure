@@ -1,18 +1,10 @@
-# elkmon secure
+# elkmon-secure 
 
-**elkmon-secure** updates SGentry's original [elkmon](https://github.com/sgentry/elkmon) package to support secure connections with the latest firmware (version 2.0.51) on the M1-XEP.  
-Note that this firmware only supports TLS-1.2, so it is still using deprecated TLS, but this should work on modern systems, unlike the older TLS 1.0 which has typically been removed.
+**elkmon-secure** updates Simon Gentry's [elkmon](https://github.com/sgentry/elkmon) package to support secure connections with the latest firmware (version 2.0.51) on the M1-XEP.  
+
+Note that this firmware only supports TLS-1.2, which is deprecated TLS, but this should work on modern systems, unlike the older TLS 1.0 which has typically been removed.
 
 If you have disabled username/passwords in your M1XEP (which is not recommended) then you can omit the `userName` and `password` properties when constructing the `Elk` instance.
-
-*Original readme follows*
-
-**elkmon** is a module for interfacing with the [Elk M1](http://www.elkproducts.com/product-catalog/m1-gold-cross-platform-control) security and automation control system.
-
-Not all features have been implemented. This is something I have been experimenting with in my free time. 
-I don't have a thermostat integrated with my home system so I haven't implemented those commands yet. However, a Thermostat Reply Message (TR) will be parsed.
-
-#### Note: For users upgrading to version 1.0.0 from an earlier version, please be aware that there was a bug where the Physical and Logical status, for a zone, was incorrectly swapped. This has been fixed in version 1.0.0.
 
 ## Features
 
