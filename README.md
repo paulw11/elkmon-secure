@@ -1,6 +1,6 @@
-# elkmon-secure 
+# elkmon2 
 
-**elkmon-secure** updates Simon Gentry's [elkmon](https://github.com/sgentry/elkmon) package to support secure connections with the latest firmware (version 2.0.51) on the M1-XEP.  
+**elkmon2** updates Simon Gentry's [elkmon](https://github.com/sgentry/elkmon) package to support secure connections with the latest firmware (version 2.0.51) on the M1-XEP.  
 
 Note that this firmware only supports TLS-1.2, which is deprecated TLS, but this should work on modern systems, unlike the older TLS 1.0 which has typically been removed.
 
