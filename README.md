@@ -97,59 +97,62 @@ var elk = new Elk(
 
 # API
 
-## connect()
+## `connect()`
   Connects to M1XEP.
 
-## disconnect()
+## `disconnect()`
   Closes connection to M1XEP.
 
-## arm(areaId, armMode, keypadCode)
+## `arm(areaId, armMode, keypadCode)`
   Arm Elk in specified arming mode
 
-## disarm(areaId, keypadCode)
+## `disarm(areaId, keypadCode)`
   Disarm Elk
 
-## activateTask(taskId)
+## `activateTask(taskId)`
   Activates a task
 
-## setOutputOn(outputId, seconds)
+## `setOutputOn(outputId, seconds)`
   Turns an output on
 
-## setOutputOff(outputId)
+## `setOutputOff(outputId)`
   Turns an output off
 
-## speak(message)
+## `speak(message)`
   Command Elk panel to speak a message over it's speaker.
 
-## toggleOutput(outputId)
+## `toggleOutput(outputId)`
   Toggles a control Output On/Off.
 
-## requestOutputStatusReport([timeout])
+## `requestOutputStatusReport([timeout])`
   Request the Control Output Status report from Elk panel.
 
-## bypassZone(zoneId, areaId, keypadCode)
+## `bypassZone(zoneId, areaId, keypadCode)`
   Bypass a Zone.
 
-## requestArmingStatus([timeout])
+## `requestArmingStatus([timeout])`
   Requests an Arming Status Report.
 
-## requestAreas([timeout])
+## `requestAreas([timeout])
   Request Keypad Area assignments
 
-## requestZoneDefinitionReport([timeout])
+## requestZoneDefinitionReport([timeout])`
   Requests a Zone Definition Report.
 
-## requestZonePartitionReport([timeout])
+## `requestZonePartitionReport([timeout])`
   Requests a Zone Partition Report.
 
-## requestZoneVoltageReport(id, [timeout])
+## `requestZoneVoltageReport(id, [timeout])`
   Requests a Zone Voltage Report.
 
-## requestZoneStatusReport([timeout])
+## `requestZoneStatusReport([timeout])`
   Requests a Zone Status Report.
 
-## requestTextDescription(id, type, [timeout])
+## `requestTextDescription(id, type, [timeout])`
   Requests a text description.
 
-## requestTextDescriptionAll(type)
+## `requestTextDescriptionAll(type)`
   Requests the configured Text Descriptions, by type.
+
+## `requestTemperature([timeout])`
+  Requests the temperature from all zones and keypads
