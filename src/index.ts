@@ -20,8 +20,14 @@ import { ArmMode, TextDescriptionType, Words } from './lib/enums';
 import { textDescriptionMaxRange } from './lib/types';
 import { leftPad } from './lib/utils';
 
+export * from './lib/interfaces';
+export * from './lib/enums';
+export * from './lib/messages';
+export * from './lib/types';
+export * from './lib/models';
 
-class Elk extends EventEmitter {
+
+export class Elk extends EventEmitter {
 
   private isAuthorized: boolean = false;
   private connection: any = null;
@@ -562,4 +568,3 @@ class Elk extends EventEmitter {
 
 }
 
-export = Elk;
