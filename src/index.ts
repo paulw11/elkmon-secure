@@ -9,6 +9,7 @@ import {
   ArmingStatusReport,
   OutputStatusReport,
   TextStringDescriptionReport,
+  TemperatureReply,
   ZoneDefinitionReport,
   ZonePartitionReport,
   ZoneStatusReport,
@@ -555,6 +556,29 @@ export class Elk extends EventEmitter {
   
     let elk = new ElkMessage(`ts${leftPad(thermostatId.toString(), 2, '0')}${leftPad(value.toString(), 2, '0')}${element.toString()}`, null);
     this.connection.write(`${elk.message}\r\n`);
+  }
+
+  /**
+   * Requests the current temperatures from the Elk M1.
+   * @param timeout The timeout for the request in milliseconds.
+   * @returns A promise that resolves with the temperature data.
+   */
+  requestTemperature(timeout = 5000): Promise<TemperatureReply> {  
+        return new Promise((resolve, reject) => {
+    //Listen for response
+      this.once('LW', (response) => {
+        resolve(response);
+      });
+
+       //Send the command
+      let elk = new ElkMessage('lw', null);
+      this.connection.write(`${elk.message}\r\n`);
+
+      //Setup timeout
+      setTimeout(function () {
+        reject('Timout occured before Temperature Reply (lw) was received.');
+      }, timeout);
+    });
   }
 
   /**
